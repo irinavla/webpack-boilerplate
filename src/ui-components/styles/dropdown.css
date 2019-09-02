@@ -1,0 +1,27 @@
+.dropdown .trigger {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown .trigger::after {
+  content: ">";
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  transform: rotate(90deg) scale(0.5, 1);
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.dropdown .trigger.active::after {
+  transform: rotate(-90deg) scale(0.5, 1);
+}
+
+.dropdown .content {
+  padding-left: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
